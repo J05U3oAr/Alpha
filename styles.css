@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600&display=swap');
+
+/* =============================================
+   ALPH₂A — Landing Page Styles
+   Paleta: Mughal Green, Prussian Blue, Teal Blue,
+           Pastel Blue, Light Silver
+   Tipografía: Bebas Neue (display), Barlow Condensed (body)
+   ============================================= */
+
+:root {
+  --mughal:   #366B2B;
+  --prussian: #103A57;
+  --teal:     #307B8E;
+  --pastel:   #A9D3C5;
+  --silver:   #CEE5D6;
+  --white:    #ffffff;
+  --bg-light: #f7faf8;
+  --bg-page:  #f4f4f2;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-dimmed: rgba(255, 255, 255, 0.35);
+  --border-light: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Reset básico ─────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+  background: var(--bg-page);
+  color: var(--prussian);
+  line-height: 1.5;
+}
+
+/* ─── Accesibilidad ───────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Wrapper general ─────────────────────── */
+.boceto-root {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 0.5px solid #dde8e2;
+}
+
+/* ─── Etiqueta de sección (boceto) ────────── */
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  background: #f0f0ee;
+  padding: 4px 10px;
+  border-bottom: 0.5px solid #ddd;
+}
+
+/* =============================================
+   NAVEGACIÓN
+   ============================================= */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 0.5px solid var(--border-light);
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--white);
+  letter-spacing: 3px;
+}
+
+.nav-logo span {
+  color: var(--teal);
+  font-size: 14px;
+  vertical-align: super;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-links li:hover {
+  color: var(--white);
+}
+
+.nav-cta {
+  background: var(--teal);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover {
+  background: #255e6e;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  background: var(--prussian);
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 36px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 58px;
+  line-height: 1;
+  color: var(--white);
+  letter-spacing: 3px;
+}
+
+.hero-headline span {
+  color: var(--pastel);
+  font-size: 40px;
+  vertical-align: super;
+}
+
+.hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 360px;
+  line-height: 1.5;
+}
+
+.hero-placeholder {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  margin: 8px 24px 24px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 24px 24px;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #255e6e;
+}
+
+.btn-outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 4px;
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+/* =============================================
+   BARRA DE ESTADÍSTICAS
+   ============================================= */
+.stats-bar {
+  background: var(--mughal);
+  display: flex;
+  align-items: stretch;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 16px 20px;
+  border-right: 0.5px solid var(--border-light);
+  text-align: center;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  color: var(--silver);
+  letter-spacing: 2px;
+  display: block;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  display: block;
+  margin-top: 2px;
+}
+
+/* =============================================
+   SECCIONES GENERALES
+   ============================================= */
+.section {
+  padding: 32px 24px;
+  background: var(--white);
+  border-top: 0.5px solid #ddeee6;
+}
+
+.section-light {
+  background: var(--bg-light);
+  border-top: 0.5px solid #d6e8de;
+}
+
+.section-dark {
+  background: var(--prussian);
+  border-top: none;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--prussian);
+  margin-bottom: 6px;
+}
+
+.section-title--light {
+  color: var(--white);
+}
+
+.section-accent {
+  width: 40px;
+  height: 3px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.section-accent--green {
+  background: var(--mughal);
+}
+
+/* Layout de dos columnas */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Placeholder genérico */
+.content-placeholder {
+  background: #f0f4f2;
+  border: 1px dashed #c8d8d0;
+  border-radius: 6px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aabdb5;
+}
+
+.content-placeholder--dark {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Texto de cuerpo */
+.body-text {
+  font-size: 13px;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.6;
+}
+
+.body-text--light {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+/* =============================================
+   TARJETAS DE CARACTERÍSTICAS
+   ============================================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 0.5px solid #d6e8de;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--teal);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon i {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.feature-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--prussian);
+  margin-bottom: 4px;
+}
+
+.feature-body {
+  font-size: 11px;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* =============================================
+   SECCIÓN TECNOLOGÍA
+   ============================================= */
+.tech-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tech-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.tech-text-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--silver);
+  margin-bottom: 2px;
+}
+
+.tech-text-body {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =============================================
+   SECCIÓN CTA
+   ============================================= */
+.cta-section {
+  background: var(--mughal);
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: var(--silver);
+}
+
+.cta-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background: #0a1e2b;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer-links li {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dimmed);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-links li:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* =============================================
+   RESPONSIVE — Tablet / Mobile
+   ============================================= */
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+
+  .hero-headline { font-size: 40px; }
+
+  .two-col,
+  .features-grid,
+  .tech-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-bar {
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    flex: 1 1 50%;
+    border-right: none;
+    border-bottom: 0.5px solid var(--border-light);
+  }
+}
