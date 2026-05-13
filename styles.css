@@ -186,11 +186,19 @@ body {
 .hero-content {
   flex: 1;
   padding: 36px 24px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  position: relative;
-  z-index: 1;
+  max-width: 430px;
 }
 
 .hero-eyebrow {
@@ -212,7 +220,9 @@ body {
 .hero-headline span {
   color: var(--pastel);
   font-size: 40px;
-  vertical-align: super;
+  vertical-align: middle;
+  position: relative;
+  bottom: -0.18em;
 }
 
 .hero-sub {
@@ -223,47 +233,17 @@ body {
   line-height: 1.5;
 }
 
-.hero-brand-panel {
-  margin: 4px 24px 24px;
-  padding: 22px 20px 18px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  backdrop-filter: blur(4px);
+.hero-logo-wrap {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  justify-content: flex-end;
 }
 
-.hero-brand-panel::before {
-  content: "";
-  position: absolute;
-  inset: -30% 18% auto;
-  height: 120px;
-  background: radial-gradient(circle, rgba(169, 211, 197, 0.14), transparent 70%);
-  pointer-events: none;
-}
-
-.hero-brand-panel__logo {
-  width: min(100%, 500px);
+.hero-logo {
+  width: min(100%, 360px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
-}
-
-.hero-brand-panel__caption {
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.64);
-  text-align: center;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.28));
 }
 
 .hero-actions {
@@ -271,6 +251,8 @@ body {
   gap: 16px;
   align-items: center;
   padding: 0 24px 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary {
@@ -675,21 +657,28 @@ body {
 @media (max-width: 640px) {
   .nav-links { display: none; }
 
-  .hero-headline { font-size: 40px; }
-
   .nav-logo {
     max-width: 124px;
   }
 
-  .hero-brand-panel {
-    margin: 4px 20px 20px;
-    padding: 18px 16px 16px;
-    border-radius: 14px;
+  .hero-headline { font-size: 40px; }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
-  .hero-brand-panel__caption {
-    font-size: 11px;
-    letter-spacing: 1px;
+  .hero-copy,
+  .hero-sub {
+    max-width: none;
+  }
+
+  .hero-logo-wrap {
+    justify-content: center;
+  }
+
+  .hero-logo {
+    width: min(100%, 280px);
   }
 
   .two-col,
