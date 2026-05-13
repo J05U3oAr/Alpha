@@ -27,7 +27,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 1 — Navegación + Hero</div>
 
-  <header class="hero">
+  <header class="hero reveal is-visible">
 
     <!-- Barra de navegación -->
     <nav class="nav-bar" aria-label="Navegación principal">
@@ -78,7 +78,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 2 — Estadísticas</div>
 
-  <div class="stats-bar" role="region" aria-label="Estadísticas del proyecto">
+  <div class="stats-bar reveal" role="region" aria-label="Estadísticas del proyecto">
 
     <div class="stat-item">
       <span class="stat-num">—%</span>
@@ -108,7 +108,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 3 — Acerca del proyecto</div>
 
-  <section class="section" aria-labelledby="about-title">
+  <section class="section reveal" id="proyecto" aria-labelledby="about-title">
 
     <h2 class="section-title" id="about-title">El Proyecto</h2>
     <div class="section-accent"></div>
@@ -129,7 +129,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 4 — Características clave</div>
 
-  <section class="section section-light" aria-labelledby="features-title">
+  <section class="section section-light reveal" aria-labelledby="features-title">
 
     <h2 class="section-title" id="features-title">¿Por qué Alph₂a?</h2>
     <div class="section-accent section-accent--green"></div>
@@ -137,7 +137,7 @@
     <div class="features-grid">
 
       <!-- Tarjeta 1 -->
-      <div class="feature-card">
+      <div class="feature-card reveal reveal-delay-1">
         <div class="feature-icon">
           <i class="ti ti-leaf" aria-hidden="true"></i>
         </div>
@@ -146,7 +146,7 @@
       </div>
 
       <!-- Tarjeta 2 -->
-      <div class="feature-card">
+      <div class="feature-card reveal reveal-delay-2">
         <div class="feature-icon">
           <i class="ti ti-bolt" aria-hidden="true"></i>
         </div>
@@ -155,7 +155,7 @@
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="feature-card">
+      <div class="feature-card reveal reveal-delay-3">
         <div class="feature-icon">
           <i class="ti ti-tool" aria-hidden="true"></i>
         </div>
@@ -173,7 +173,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 5 — Tecnología</div>
 
-  <section class="section section-dark" aria-labelledby="tech-title">
+  <section class="section section-dark reveal" id="tecnologia" aria-labelledby="tech-title">
 
     <h2 class="section-title section-title--light" id="tech-title">Tecnología HHO</h2>
     <div class="section-accent"></div>
@@ -237,7 +237,57 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 6 — Llamada a la acción</div>
 
-  <section class="cta-section" aria-labelledby="cta-title">
+  <div class="section-label">Sección 6 — Áreas de trabajo</div>
+
+  <!-- ════════════════════════════════════════════
+       SECCIÓN 6 — ÁREAS DE TRABAJO
+       ════════════════════════════════════════════ -->
+  <section class="section reveal" id="equipo" aria-labelledby="areas-title">
+    <h2 class="section-title" id="areas-title">Áreas de trabajo</h2>
+    <div class="section-accent"></div>
+
+    <p class="body-text areas-intro reveal reveal-delay-1">
+      El proyecto se organizará en equipos especializados. Por ahora estas son las
+      áreas generales confirmadas, con la cantidad de personal pendiente de definir.
+    </p>
+
+    <div class="areas-grid">
+      <article class="area-card reveal reveal-delay-1">
+        <div class="area-card__icon"><i class="ti ti-flask" aria-hidden="true"></i></div>
+        <p class="area-card__name">Hidrógeno</p>
+        <p class="area-card__count">Personal por confirmar</p>
+        <p class="area-card__body">Investigación, producción, seguridad y operación del sistema HHO.</p>
+      </article>
+
+      <article class="area-card reveal reveal-delay-2">
+        <div class="area-card__icon"><i class="ti ti-building-bank" aria-hidden="true"></i></div>
+        <p class="area-card__name">Administración</p>
+        <p class="area-card__count">Personal por confirmar</p>
+        <p class="area-card__body">Coordinación interna, finanzas, documentación y seguimiento del proyecto.</p>
+      </article>
+
+      <article class="area-card reveal reveal-delay-3">
+        <div class="area-card__icon"><i class="ti ti-settings" aria-hidden="true"></i></div>
+        <p class="area-card__name">Mecánica</p>
+        <p class="area-card__count">Personal por confirmar</p>
+        <p class="area-card__body">Montaje, integración del sistema y evaluación de compatibilidad vehicular.</p>
+      </article>
+
+      <article class="area-card reveal reveal-delay-4">
+        <div class="area-card__icon"><i class="ti ti-bolt" aria-hidden="true"></i></div>
+        <p class="area-card__name">Eléctrica</p>
+        <p class="area-card__count">Personal por confirmar</p>
+        <p class="area-card__body">Cableado, control, monitoreo y soporte a la electrólisis del sistema.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SECCIÓN 7 — LLAMADA A LA ACCIÓN
+       ════════════════════════════════════════════ -->
+  <div class="section-label">Sección 7 — Llamada a la acción</div>
+
+  <section class="cta-section reveal" id="contacto" aria-labelledby="cta-title">
     <h2 class="cta-title" id="cta-title">¿Quieres saber más?</h2>
     <p class="cta-sub">[ Frase motivacional del proyecto — pendiente de definir ]</p>
     <button class="btn-primary" type="button" style="margin-top: 6px;">Contáctanos</button>
@@ -249,7 +299,7 @@
        ══════════════════════════════════════════ -->
   <div class="section-label">Sección 7 — Footer</div>
 
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="footer-logo" aria-label="Alph₂a">Alph₂a</div>
     <ul class="footer-links" role="list">
       <li>Privacidad</li>
@@ -260,5 +310,6 @@
 
 </div><!-- /.boceto-root -->
 
+<script src="scroll-animations.js"></script>
 </body>
 </html>
