@@ -111,16 +111,16 @@ body {
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  color: var(--white);
-  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  max-width: 150px;
 }
 
-.nav-logo span {
-  color: var(--teal);
-  font-size: 14px;
-  vertical-align: super;
+.nav-logo__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(169, 211, 197, 0.14));
 }
 
 .nav-links {
@@ -189,6 +189,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-eyebrow {
@@ -221,20 +223,47 @@ body {
   line-height: 1.5;
 }
 
-.hero-placeholder {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
-  border-radius: 6px;
-  margin: 8px 24px 24px;
-  height: 80px;
+.hero-brand-panel {
+  margin: 4px 24px 24px;
+  padding: 22px 20px 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-brand-panel::before {
+  content: "";
+  position: absolute;
+  inset: -30% 18% auto;
+  height: 120px;
+  background: radial-gradient(circle, rgba(169, 211, 197, 0.14), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-brand-panel__logo {
+  width: min(100%, 500px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
+}
+
+.hero-brand-panel__caption {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.64);
+  text-align: center;
 }
 
 .hero-actions {
@@ -609,10 +638,15 @@ body {
 }
 
 .footer-logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 3px;
+  width: 110px;
+}
+
+.footer-logo__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.78;
+  filter: grayscale(0.08);
 }
 
 .footer-links {
@@ -642,6 +676,21 @@ body {
   .nav-links { display: none; }
 
   .hero-headline { font-size: 40px; }
+
+  .nav-logo {
+    max-width: 124px;
+  }
+
+  .hero-brand-panel {
+    margin: 4px 20px 20px;
+    padding: 18px 16px 16px;
+    border-radius: 14px;
+  }
+
+  .hero-brand-panel__caption {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
 
   .two-col,
   .areas-grid,
