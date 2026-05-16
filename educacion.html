@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alph₂a — Centro Educativo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1 class="sr-only">Alph₂a — Centro educativo sobre hidrógeno y funcionamiento del proyecto</h1>
+
+<div class="boceto-root">
+  <header class="hero page-hero reveal is-visible">
+    <nav class="nav-bar" aria-label="Navegación principal">
+      <div class="nav-logo" aria-label="Logo Alph₂a">
+        <a href="index.html" aria-label="Volver al inicio">
+          <img src="Logo.png" alt="Logo Alph₂a" class="nav-logo__image" />
+        </a>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#proyecto">Proyecto</a></li>
+        <li><a href="index.html#tecnologia">Tecnología</a></li>
+        <li><a href="educacion.html" aria-current="page">Educación</a></li>
+        <li><a href="index.html#equipo">Equipo</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+
+      <button class="nav-cta" type="button" onclick="window.location.href='index.html'">Volver al inicio</button>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Aprendizaje · Hidrógeno · Movilidad</p>
+        <h2 class="hero-headline">Centro Educativo</h2>
+        <p class="hero-sub">
+          Un espacio dedicado a explicar el uso del hidrógeno en vehículos y el
+          funcionamiento del proyecto Alph₂a, manteniendo el orden de contenido que definiste.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section reveal" aria-labelledby="educacion-title">
+    <h2 class="section-title" id="educacion-title">Educación</h2>
+    <div class="section-accent"></div>
+
+    <div class="edu-tabs" role="tablist" aria-label="Secciones educativas">
+      <button class="edu-tab active" type="button" role="tab" aria-selected="true" aria-controls="panel-h2" id="tab-h2" data-tab-target="panel-h2">
+        <i class="ti ti-atom" aria-hidden="true"></i>
+        Hidrógeno en vehículos
+      </button>
+      <button class="edu-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-func" id="tab-func" data-tab-target="panel-func">
+        <i class="ti ti-schema" aria-hidden="true"></i>
+        Funcionamiento del proyecto
+      </button>
+    </div>
+
+    <div class="edu-panel active reveal reveal-delay-1 is-visible" id="panel-h2" role="tabpanel" aria-labelledby="tab-h2">
+      <div class="h2-highlight">
+        El hidrógeno (H₂) es el elemento más abundante del universo. Cuando se utiliza como combustible en vehículos, solo emite vapor de agua, con potencial de reducir drásticamente las emisiones asociadas al transporte. La tecnología HHO permite incorporarlo en motores convencionales sin necesidad de reemplazar el vehículo completo.
+      </div>
+
+      <div class="h2-grid">
+        <article class="h2-card">
+          <div class="h2-card__icon"><i class="ti ti-droplet" aria-hidden="true"></i></div>
+          <p class="h2-card__title">¿Qué es el HHO?</p>
+          <p class="h2-card__body">El gas HHO, también llamado gas de Brown, es una mezcla de hidrógeno y oxígeno obtenida mediante electrólisis del agua. Al inyectarse en el motor, mejora la combustión del combustible convencional y puede ayudar a reducir consumo y emisiones.</p>
+        </article>
+
+        <article class="h2-card">
+          <div class="h2-card__icon"><i class="ti ti-engine" aria-hidden="true"></i></div>
+          <p class="h2-card__title">Compatibilidad vehicular</p>
+          <p class="h2-card__body">El sistema está pensado para motores de gasolina y diésel existentes. No reemplaza el combustible base, sino que lo potencia, por eso se presenta como un potenciador. La instalación puede plantearse de forma no invasiva y reversible.</p>
+        </article>
+
+        <article class="h2-card">
+          <div class="h2-card__icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+          <p class="h2-card__title">Beneficios ambientales</p>
+          <p class="h2-card__body">Al mejorar la eficiencia de combustión, se busca reducir gases contaminantes como CO, HC y NOx. Esto lo vuelve una alternativa de transición hacia la movilidad sostenible, aplicable sin esperar infraestructura completa de hidrógeno puro.</p>
+        </article>
+
+        <article class="h2-card">
+          <div class="h2-card__icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+          <p class="h2-card__title">Mitos vs realidades</p>
+          <p class="h2-card__body">El hidrógeno puede manejarse de forma segura con diseño y operación adecuados. En sistemas HHO, el gas se genera bajo demanda y no se almacena en grandes cantidades, lo que ayuda a minimizar riesgos operativos.</p>
+        </article>
+      </div>
+
+      <p class="h2-process-label">¿Cómo funciona? — Proceso simplificado</p>
+      <div class="h2-process" aria-label="Proceso simplificado del uso de HHO">
+        <div class="h2-step">
+          <div class="h2-step__num">1</div>
+          <p class="h2-step__label">Agua destilada en celda</p>
+        </div>
+        <div class="h2-step">
+          <div class="h2-step__num">2</div>
+          <p class="h2-step__label">Electrólisis genera HHO</p>
+        </div>
+        <div class="h2-step">
+          <div class="h2-step__num">3</div>
+          <p class="h2-step__label">Gas inyectado al motor</p>
+        </div>
+        <div class="h2-step">
+          <div class="h2-step__num">4</div>
+          <p class="h2-step__label">Mejor combustión</p>
+        </div>
+        <div class="h2-step">
+          <div class="h2-step__num">5</div>
+          <p class="h2-step__label">Menos emisiones</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-panel" id="panel-func" role="tabpanel" aria-labelledby="tab-func">
+      <p class="boceto-note">
+        <i class="ti ti-pencil" aria-hidden="true" style="color: var(--teal); margin-right: 6px;"></i>
+        Boceto estructural — el contenido se agregará próximamente.
+      </p>
+
+      <div class="boceto-grid">
+        <article class="boceto-card">
+          <div class="boceto-card__header">
+            <div class="boceto-card__num">1</div>
+            <p class="boceto-card__title">Origen del proyecto</p>
+          </div>
+          <p class="boceto-card__body">[ Texto pendiente — historia, motivación y contexto del proyecto Alph₂a ]</p>
+        </article>
+
+        <article class="boceto-card">
+          <div class="boceto-card__header">
+            <div class="boceto-card__num">2</div>
+            <p class="boceto-card__title">Modelo de negocio</p>
+          </div>
+          <p class="boceto-card__body">[ Texto pendiente — cómo funciona el modelo, instalación, distribución, etc. ]</p>
+        </article>
+
+        <article class="boceto-card">
+          <div class="boceto-card__header">
+            <div class="boceto-card__num">3</div>
+            <p class="boceto-card__title">Fases del proyecto</p>
+          </div>
+          <p class="boceto-card__body">[ Texto pendiente — etapas: investigación, prototipo, piloto, escalamiento ]</p>
+        </article>
+
+        <article class="boceto-card">
+          <div class="boceto-card__header">
+            <div class="boceto-card__num">4</div>
+            <p class="boceto-card__title">Impacto esperado</p>
+          </div>
+          <p class="boceto-card__body">[ Texto pendiente — métricas de impacto ambiental, económico y social ]</p>
+        </article>
+      </div>
+
+      <div class="boceto-full">
+        <p class="boceto-full__label">
+          <i class="ti ti-photo" aria-hidden="true" style="margin-right: 6px;"></i>
+          Diagrama / infografía del proyecto — pendiente
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal" aria-labelledby="cta-title">
+    <h2 class="cta-title" id="cta-title">Explora más del proyecto</h2>
+    <p class="cta-sub">Regresa a la página principal para continuar con la visión general de Alph₂a.</p>
+    <button class="btn-primary" type="button" onclick="window.location.href='index.html'">Ir al inicio</button>
+  </section>
+
+  <footer class="footer reveal">
+    <div class="footer-logo" aria-label="Alph₂a">
+      <img src="Logo.png" alt="Logo Alph₂a" class="footer-logo__image" />
+    </div>
+    <ul class="footer-links" role="list">
+      <li>Privacidad</li>
+      <li>Términos</li>
+      <li>Contacto</li>
+    </ul>
+  </footer>
+</div>
+
+<script src="scroll-animations.js"></script>
+</body>
+</html>

@@ -5,15 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alph₂a — Potenciador de Hidrógeno</title>
 
-  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet" />
-
-  <!-- Íconos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,30 +16,23 @@
 <h1 class="sr-only">Alph₂a — Proyecto de potenciador de hidrógeno para vehículos</h1>
 
 <div class="boceto-root">
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 1 — NAVEGACIÓN + HERO
-       ══════════════════════════════════════════ -->
-  
   <header class="hero reveal is-visible">
-
-    <!-- Barra de navegación -->
     <nav class="nav-bar" aria-label="Navegación principal">
       <div class="nav-logo" aria-label="Logo Alph₂a">
         <img src="Logo.png" alt="Logo Alph₂a" class="nav-logo__image" />
       </div>
 
       <ul class="nav-links" role="list">
-        <li>Proyecto</li>
-        <li>Tecnología</li>
-        <li>Equipo</li>
-        <li>Contacto</li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="educacion.html">Educación</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
 
-      <button class="nav-cta" type="button">Más info</button>
+      <button class="nav-cta" type="button" onclick="window.location.href='educacion.html'">Más info</button>
     </nav>
 
-    <!-- Contenido del hero -->
     <div class="hero-content">
       <div class="hero-copy">
         <p class="hero-eyebrow">Innovación · Hidrógeno · Movilidad</p>
@@ -65,21 +53,13 @@
       </div>
     </div>
 
-    <!-- Botones de acción -->
     <div class="hero-actions">
-      <button class="btn-primary" type="button">Conoce el proyecto</button>
-      <button class="btn-outline" type="button">Ver tecnología</button>
+      <button class="btn-primary" type="button" onclick="document.getElementById('proyecto')?.scrollIntoView({ behavior: 'smooth' })">Conoce el proyecto</button>
+      <button class="btn-outline" type="button" onclick="document.getElementById('tecnologia')?.scrollIntoView({ behavior: 'smooth' })">Ver tecnología</button>
     </div>
-
   </header>
 
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 2 — BARRA DE ESTADÍSTICAS
-       ══════════════════════════════════════════ -->
-  
   <div class="stats-bar reveal" role="region" aria-label="Estadísticas del proyecto">
-
     <div class="stat-item">
       <span class="stat-num">—%</span>
       <span class="stat-label">Reducción emisiones</span>
@@ -99,16 +79,9 @@
       <span class="stat-num">—</span>
       <span class="stat-label">País de origen</span>
     </div>
-
   </div>
 
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 3 — ACERCA DEL PROYECTO
-       ══════════════════════════════════════════ -->
-  
   <section class="section reveal" id="proyecto" aria-labelledby="about-title">
-
     <h2 class="section-title" id="about-title">El Proyecto</h2>
     <div class="section-accent"></div>
 
@@ -119,22 +92,13 @@
       </p>
       <div class="content-placeholder" aria-hidden="true">Imagen / gráfico</div>
     </div>
-
   </section>
 
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 4 — ¿POR QUÉ Alph₂a?
-       ══════════════════════════════════════════ -->
-  
   <section class="section section-light reveal" aria-labelledby="features-title">
-
     <h2 class="section-title" id="features-title">¿Por qué Alph₂a?</h2>
     <div class="section-accent section-accent--green"></div>
 
     <div class="features-grid">
-
-      <!-- Tarjeta 1 -->
       <div class="feature-card reveal reveal-delay-1">
         <div class="feature-icon">
           <i class="ti ti-leaf" aria-hidden="true"></i>
@@ -143,7 +107,6 @@
         <p class="feature-body">[ Descripción breve de beneficio ambiental ]</p>
       </div>
 
-      <!-- Tarjeta 2 -->
       <div class="feature-card reveal reveal-delay-2">
         <div class="feature-icon">
           <i class="ti ti-bolt" aria-hidden="true"></i>
@@ -152,7 +115,6 @@
         <p class="feature-body">[ Descripción de mejora en potencia / eficiencia ]</p>
       </div>
 
-      <!-- Tarjeta 3 -->
       <div class="feature-card reveal reveal-delay-3">
         <div class="feature-icon">
           <i class="ti ti-tool" aria-hidden="true"></i>
@@ -160,23 +122,14 @@
         <p class="feature-title">Compatible</p>
         <p class="feature-body">[ Tipos de vehículos o motores compatibles ]</p>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 5 — TECNOLOGÍA
-       ══════════════════════════════════════════ -->
-  
   <section class="section section-dark reveal" id="tecnologia" aria-labelledby="tech-title">
-
     <h2 class="section-title section-title--light" id="tech-title">Tecnología HHO</h2>
     <div class="section-accent"></div>
 
     <div class="two-col">
-
       <div class="content-placeholder content-placeholder--dark" aria-hidden="true">
         Diagrama / esquema técnico
       </div>
@@ -188,7 +141,6 @@
         </p>
 
         <div class="tech-row">
-
           <div class="tech-item">
             <div class="tech-dot" aria-hidden="true"></div>
             <div>
@@ -220,19 +172,11 @@
               <p class="tech-text-body">[ Descripción corta ]</p>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ════════════════════════════════════════════
-       SECCIÓN 6 — ÁREAS DE TRABAJO
-       ════════════════════════════════════════════ -->
-  
   <section class="section reveal" id="equipo" aria-labelledby="areas-title">
     <h2 class="section-title" id="areas-title">Áreas de trabajo</h2>
     <div class="section-accent"></div>
@@ -273,21 +217,12 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════════
-       SECCIÓN 7 — LLAMADA A LA ACCIÓN
-       ════════════════════════════════════════════ -->
-  
   <section class="cta-section reveal" id="contacto" aria-labelledby="cta-title">
     <h2 class="cta-title" id="cta-title">¿Quieres saber más?</h2>
     <p class="cta-sub">[ Frase motivacional del proyecto — pendiente de definir ]</p>
     <button class="btn-primary" type="button" style="margin-top: 6px;">Contáctanos</button>
   </section>
 
-
-  <!-- ══════════════════════════════════════════
-       SECCIÓN 8 — FOOTER
-       ══════════════════════════════════════════ -->
-  
   <footer class="footer reveal">
     <div class="footer-logo" aria-label="Alph₂a">
       <img src="Logo.png" alt="Logo Alph₂a" class="footer-logo__image" />
@@ -298,8 +233,7 @@
       <li>Contacto</li>
     </ul>
   </footer>
-
-</div><!-- /.boceto-root -->
+</div>
 
 <script src="scroll-animations.js"></script>
 </body>

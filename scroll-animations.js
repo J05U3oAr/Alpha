@@ -90,3 +90,30 @@ revealItems.forEach((item) => {
 
   revealObserver.observe(item);
 });
+
+const eduTabs = document.querySelectorAll('[data-tab-target]');
+const eduPanels = document.querySelectorAll('.edu-panel');
+
+eduTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const targetId = tab.getAttribute('data-tab-target');
+    const targetPanel = document.getElementById(targetId);
+
+    if (!targetPanel) {
+      return;
+    }
+
+    eduTabs.forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-selected', 'false');
+    });
+
+    eduPanels.forEach((panel) => {
+      panel.classList.remove('active');
+    });
+
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    targetPanel.classList.add('active');
+  });
+});
