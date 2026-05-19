@@ -2,7 +2,20 @@ const revealItems = document.querySelectorAll('.reveal');
 const teamSection = document.getElementById('equipo');
 const contactSection = document.getElementById('contacto');
 const footer = document.querySelector('.footer');
+const hero = document.querySelector('.hero');
 const heroParticles = document.querySelector('.hero-particles');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const heroIntroDelay = 1650;
+
+if (hero) {
+  if (prefersReducedMotion.matches) {
+    hero.classList.add('hero--intro-complete');
+  } else {
+    window.setTimeout(() => {
+      hero.classList.add('hero--intro-complete');
+    }, heroIntroDelay);
+  }
+}
 
 if (heroParticles) {
   const particleBlueprints = [

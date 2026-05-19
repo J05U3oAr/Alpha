@@ -17,6 +17,23 @@
 
 <div class="boceto-root">
   <header class="hero reveal is-visible">
+    <div class="hero-lamp" aria-hidden="true">
+      <div class="hero-lamp__scale">
+        <div class="hero-lamp__cone hero-lamp__cone--left">
+          <div class="hero-lamp__mask hero-lamp__mask--vertical"></div>
+          <div class="hero-lamp__mask hero-lamp__mask--horizontal"></div>
+        </div>
+        <div class="hero-lamp__cone hero-lamp__cone--right">
+          <div class="hero-lamp__mask hero-lamp__mask--vertical"></div>
+          <div class="hero-lamp__mask hero-lamp__mask--horizontal"></div>
+        </div>
+        <div class="hero-lamp__blur"></div>
+        <div class="hero-lamp__orb"></div>
+        <div class="hero-lamp__core"></div>
+        <div class="hero-lamp__line"></div>
+        <div class="hero-lamp__floor"></div>
+      </div>
+    </div>
     <nav class="nav-bar" aria-label="Navegación principal">
       <div class="nav-logo" aria-label="Logo Alph₂a">
         <img src="Logo.png" alt="Logo Alph₂a" class="nav-logo__image" />
@@ -34,7 +51,7 @@
     </nav>
 
     <div class="hero-content">
-      <div class="hero-copy">
+      <div class="hero-copy hero-copy--intro">
         <p class="hero-eyebrow">Innovación · Hidrógeno · Movilidad</p>
 
         <h2 class="hero-headline">
@@ -53,7 +70,7 @@
       </div>
     </div>
 
-    <div class="hero-actions">
+    <div class="hero-actions hero-actions--intro">
       <button class="btn-primary" type="button" onclick="document.getElementById('proyecto')?.scrollIntoView({ behavior: 'smooth' })">Conoce el proyecto</button>
       <button class="btn-outline" type="button" onclick="document.getElementById('tecnologia')?.scrollIntoView({ behavior: 'smooth' })">Ver tecnología</button>
     </div>
